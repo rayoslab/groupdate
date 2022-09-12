@@ -13,15 +13,15 @@ module Groupdate
         @day_start = day_start
         @n_seconds = n_seconds
 
-        if ActiveRecord::VERSION::MAJOR >= 7
-          if ActiveRecord.default_timezone == :local
-            raise Groupdate::Error, "ActiveRecord.default_timezone must be :utc to use Groupdate"
-          end
-        else
-          if relation.default_timezone == :local
-            raise Groupdate::Error, "ActiveRecord::Base.default_timezone must be :utc to use Groupdate"
-          end
-        end
+        #if ActiveRecord::VERSION::MAJOR >= 7
+        #  if ActiveRecord.default_timezone == :local
+        #    raise Groupdate::Error, "ActiveRecord.default_timezone must be :utc to use Groupdate"
+        #  end
+        #else
+        #  if relation.default_timezone == :local
+        #    raise Groupdate::Error, "ActiveRecord::Base.default_timezone must be :utc to use Groupdate"
+        #  end
+        #end
       end
 
       def generate
